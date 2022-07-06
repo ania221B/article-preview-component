@@ -31,18 +31,9 @@ dd {
   margin: 0;
 }
 
-/* Removes unnecessary space caused by line height */
-
-h1,
-h2,
-h3,
-h4 {
-  line-height: 1.1;
-}
-
 /* Removes default list styling on ul, ol elements with a list role */
-ul[role='list'],
-ol[role='list'] {
+ul[class],
+ol[class] {
   list-style: none;
 }
 

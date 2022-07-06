@@ -11,13 +11,22 @@
 
     --fs-300: 0.65rem;
     --fs-400: 0.8125rem;
-    --fs-700: 1.0625rem;
+    --fs-700: 0.89rem;
 
     --fw-500: 500;
     --fw-700: 700;  
     
     --br: 0.5em;
 }
+
+@media (min-width: 37.5em) {
+    :root {
+        --fs-300: 0.65rem;
+       
+        --fs-700: 1.0625rem;
+    }
+}
+
 
 body {
     font-family: var(--ff-primary);
@@ -160,7 +169,7 @@ button {
 }
 
 .article__image {
-    max-height: 26vh;
+    max-height: 23vh;
     border-radius: var(--br) var(--br) 0 0 ;
     overflow: hidden;
 }
