@@ -171,6 +171,11 @@ main + footer {
       opacity: 1;
   }
 
+  .article__actions .btn[data-type="secondary"]:hover path,
+  .article__actions .btn[data-type="secondary"]:focus path {
+      fill: var(--clr-primary-300);
+  }
+
 /* ===== article component ===== */
 
 .article {
@@ -270,7 +275,7 @@ main + footer {
 .article.menu-is-open .article__actions .menu-wrapper {
     opacity: 1;
     z-index: 1;
-} 
+}
 
 
 
