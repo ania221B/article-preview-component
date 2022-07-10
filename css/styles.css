@@ -16,13 +16,13 @@
     --fw-500: 500;
     --fw-700: 700;  
     
-    --br: 0.5em;
+    --br: 0.65rem;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 52em) {
     :root {
         --fs-300: 0.65rem;       
-        --fs-700: 1.0625rem;
+        --fs-700: 1.25rem;
     }
 }
 
@@ -68,10 +68,12 @@ main + footer {
 .article h2 {
     margin-top: 0.75em;
     font-size: var(--fs-700);
+    
 }
 
 .article h3 {
     font-size: var(--fs-400);
+    letter-spacing: 0.09rem;
 }
 
 .article time {
@@ -86,7 +88,7 @@ main + footer {
 
 }
 
-@media (min-width: 50em) {
+@media (min-width: 52em) {
 
     .article__actions .menu-wrapper h4 {
         font-size: var(--fs-300);
@@ -100,7 +102,7 @@ main + footer {
     grid-auto-flow: row;
 }
 
-@media(min-width: 50em) {
+@media(min-width: 52em) {
     .grid {
         grid-template-columns: 0.62fr 1fr;
     }
@@ -121,14 +123,14 @@ main + footer {
 }
 
 .container {
-    width: 90%;
+    width: 88%;
     max-width: 24rem;
     margin-inline: auto;
 }
 
-@media(min-width: 50em) {
+@media(min-width: 52em) {
     .grid {
-        max-width: 45rem;
+        max-width: 50.25rem;
     }
 }
 
@@ -195,7 +197,7 @@ main + footer {
     object-position: center 20%;
 }
 
-@media(min-width: 50em) {
+@media(min-width: 52em) {
     .article__image img {
         object-position: center left;
     }
@@ -208,7 +210,7 @@ main + footer {
     background-color: var(--clr-neutral-100);
 }
 
-@media(min-width: 50em) {
+@media(min-width: 52em) {
     .article__image {
         max-height: initial;
         border-radius: var(--br) 0 0 var(--br);
@@ -223,8 +225,16 @@ main + footer {
 }
 
 .article footer {
-    margin-top: 2em;
+    margin-top: 2rem;
 }
+
+@media(min-width: 52em) {
+    .article footer {
+        margin-top: 1rem;
+    }
+    
+}
+
 
 .article footer.row {
     align-items: end;
@@ -284,7 +294,7 @@ main + footer {
 }
 
 
-@media (min-width: 50em) {
+@media (min-width: 52em) {
 
     .article.menu-is-open {
         position: static;
@@ -295,12 +305,12 @@ main + footer {
     }
 
     .article.menu-is-open .article__actions .menu-wrapper {
-        width: 13rem;
-        padding-inline: 1.75em;
-        padding-block: 0.25em;
+        min-width: 13rem;
+        padding-inline: 1.5rem;
+        padding-block: 0.125rem;
         border-radius: var(--br);
 
-        top: -5.125rem;
+        top: -4.75rem;
         left: 50%;
         transform: translateX(-50%);
         bottom: unset;    
@@ -309,15 +319,14 @@ main + footer {
 
     .article.menu-is-open .article__actions .menu-wrapper::before {
         content: '';
-        background-color: var(--clr-primary-700);
-        clip-path: polygon(0 0, 0% 100%, 100% 100%);
-        width: 1.25rem;
-        height: 1.25rem;
-
+        border: 1.25rem solid transparent;
+        border-top-color: var(--clr-primary-700);
+       
         position: absolute;
         left: 50%;
-        bottom: -39%;
-        transform: translate(-50%, -50%) rotate(-45deg);        
+        bottom: -60%;
+        transform: translateX(-50%);
+        z-index: -1;        
     }    
 }
 
