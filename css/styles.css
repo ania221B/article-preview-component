@@ -11,7 +11,7 @@
 
     --fs-300: 0.65rem;
     --fs-400: 0.8125rem;
-    --fs-700: 1rem;
+    --fs-700: 0.98rem;
 
     --fw-500: 500;
     --fw-700: 700;  
@@ -22,7 +22,7 @@
 @media (min-width: 52em) {
     :root {
         --fs-300: 0.65rem;       
-        --fs-700: 1.25rem;
+        --fs-700: 1.125rem;
     }
 }
 
@@ -66,14 +66,13 @@ main + footer {
 }
 
 .article h2 {
-    margin-top: 0.75em;
+   
     font-size: var(--fs-700);
     
 }
 
 .article h3 {
     font-size: var(--fs-400);
-    letter-spacing: 0.09rem;
 }
 
 .article time {
@@ -104,7 +103,7 @@ main + footer {
 
 @media(min-width: 52em) {
     .grid {
-        grid-template-columns: 0.62fr 1fr;
+        grid-template-columns: 0.67fr 1fr;
     }
 }
 
@@ -130,7 +129,7 @@ main + footer {
 
 @media(min-width: 52em) {
     .grid {
-        max-width: 50.25rem;
+        max-width: 49.5rem;
     }
 }
 
@@ -139,8 +138,9 @@ main + footer {
 .article__actions .btn[data-type="primary"] {
     margin-left: auto;
     border-radius: 50%;
-    padding: 0.85em;
+    padding: 0.75em;
     background-color: var(--clr-primary-200);
+    align-self: end;
   
     z-index: 10;
     position: relative;
@@ -150,7 +150,7 @@ main + footer {
   .article__actions .btn[data-type="primary"]::after {
       content:'';
       display: block;
-      background-color: var(--clr-primary-300);
+      background-color: var(--clr-primary-400);
       border-radius: 50%;
       opacity: 0;
       transition: opacity 250ms ease-in-out;
@@ -204,8 +204,8 @@ main + footer {
 }
 
 .article__content {
-    padding-block: 1.5rem;
-    padding-inline: 2.25rem;
+    padding-block: 2.5em;
+    padding-inline: 2.85em;
     border-radius: 0 0 var(--br) var(--br);
     background-color: var(--clr-neutral-100);
 }
@@ -255,10 +255,11 @@ main + footer {
 .article__actions .menu-wrapper {
     display: flex;
     justify-content: start;
+    align-items: center;
     background-color: var(--clr-primary-700);
     padding-inline: 2.5rem;
     padding-block-start: 0.75rem;
-    padding-block-end: 1.25em;
+    padding-block-end: 1.5rem;
     border-radius: 0 0 var(--br) var(--br);
 
     position: absolute;
@@ -305,8 +306,8 @@ main + footer {
     }
 
     .article.menu-is-open .article__actions .menu-wrapper {
-        min-width: 13rem;
-        padding-inline: 1.5rem;
+        min-width: 13.25rem;
+        padding-inline: 1.65rem;
         padding-block: 0.125rem;
         border-radius: var(--br);
 
