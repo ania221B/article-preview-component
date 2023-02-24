@@ -1,11 +1,28 @@
 const article = document.querySelector('.article')
+const toggle = article.querySelector('.js-share-btn')
+const shareMenu = article.querySelector('#share-menu')
 
-document.body.addEventListener('click', e => {
-  if (e.target.closest('.menu-wrapper')) return
+function openMenu () {
+  toggle.setAttribute('aria-expanded', 'true')
+  shareMenu.setAttribute('data-state', 'opened')
+}
 
-  if (!e.target.closest('.js-share-btn')) {
-    article.classList.remove('menu-is-open')
-  } else {
-    article.classList.toggle('menu-is-open')
-  }
+function closeMenu () {
+  toggle.setAttribute('aria-expanded', 'false')
+  shareMenu.setAttribute('data-state', 'closing')
+}
+
+toggle.addEventListener('click', e => {
+  if (!e.target.closest('.js-share-btn')) return
+  const isOpen = toggle.getAttribute('aria-expanded') === 'true'
+  isOpen ? closeMenu() : openMenu()
+
+  document.body.addEventListener(
+    'animationend',
+    e => {
+      if (e.animationName !== 'reduceOpacity') return
+      shareMenu.setAttribute('data-state', 'closed')
+    },
+    { once: true }
+  )
 })
